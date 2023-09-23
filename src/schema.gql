@@ -8,4 +8,7 @@ type Query {
 
   """Random Number Query"""
   randomNumber: Float!
+
+  """Get Random Number From Zero To Max (Default 10)"""
+  randomFromZeroTo(max: Int): Int!
 }
