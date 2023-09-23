@@ -1,26 +1,17 @@
 import { Query, Resolver } from '@nestjs/graphql';
 
 import { Todo } from './entities/todo.entity';
+import { TodoService } from './todo.service';
 
 @Resolver()
 export class TodoResolver {
+  constructor(private readonly todoService: TodoService) {}
+
   @Query(() => [Todo], {
     name: 'todos',
     description: 'Get all todos',
   })
   findAll(): Todo[] {
-    return [];
-  }
-  findOne() {
-    return {};
-  }
-  create() {
-    return {};
-  }
-  update() {
-    return {};
-  }
-  remove() {
-    return {};
+    return this.todoService.findAll();
   }
 }
