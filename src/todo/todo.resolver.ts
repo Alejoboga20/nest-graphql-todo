@@ -4,7 +4,7 @@ import { Todo } from './entities/todo.entity';
 import { TodoService } from './todo.service';
 import { CreateTodoInput, UpdateTodoInput } from './dtos';
 
-@Resolver()
+@Resolver(() => Todo)
 export class TodoResolver {
   constructor(private readonly todoService: TodoService) {}
 
