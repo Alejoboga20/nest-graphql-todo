@@ -24,3 +24,12 @@ type Query {
   """Get a todo by id"""
   todo(id: Int!): Todo!
 }
+
+type Mutation {
+  """Create a todo"""
+  createTodo(createTodoInput: CreateTodoInput!): Todo!
+}
+
+input CreateTodoInput {
+  description: String!
+}
