@@ -31,6 +31,9 @@ type Mutation {
 
   """Update a todo"""
   updateTodo(updateTodoInput: UpdateTodoInput!): Todo!
+
+  """Delete a todo"""
+  deleteTodo(id: Int!): Boolean!
 }
 
 input CreateTodoInput {
