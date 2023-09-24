@@ -19,7 +19,7 @@ type Query {
   randomFromZeroTo(max: Int): Int!
 
   """Get all todos"""
-  todos: [Todo!]!
+  todos(status: Boolean): [Todo!]!
 
   """Get a todo by id"""
   todo(id: Int!): Todo!
